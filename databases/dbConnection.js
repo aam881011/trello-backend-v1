@@ -11,9 +11,10 @@
 
 var mongoose = require("mongoose");
 
+    // .connect(process.env.DB_CONNECTION)
 var dbConnection = function() {
   mongoose
-    .connect(process.env.DB_CONNECTION)
+    .connect("mongodb+srv://mohamed:pass123@cluster0.tyt9dtp.mongodb.net/trello-v1?retryWrites=true&w=majority")
     .then(function() {
       console.log("Connected to MongoDB" + process.env.DB_CONNECTION);
     })
